@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" href="./Style/Images/PNG/favicon.png" /> -->
+    <meta name="description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Joola
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./Style/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- ########################################################################################### -->
+</head>
+
+<body>
+</body>
+<div class="image-displayer">
+    <div class="the-image-displayer">
+        <img src="./Style/Images/Galerie/Image-2.jpg" width="90%" alt="">
+        <div class="close-imgage-btn">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+
+<div class="big-container">
+    <div class="map">
+        <div class="the-image">
+            <img src="./Style/Images/Maps-1.jpg" width="100%" alt="">
+        </div>
+        <div class="the-image-2">
+
+            <img src="./Style/Images/Maps-2.jpg" width="100%" alt="">
+        </div>
+        <div class="the-dote">
+            <div class="One-dote">
+                <div>
+                    Dakar
+                </div>
+            </div>
+            <div class="One-dote">
+                <div>
+                    Ziguinchor
+                </div>
+            </div>
+            <div class="the-boat">
+                <div class="the-boat-infos">
+                    Avec un équipage de 44 personnes
+                </div>
+                <div class="the-boat-infos-2">
+                    Le Joola est un ferry de 76,5 mètres de longueur, 12,5 mètres de largeur, de 2 087 tonneaux
+
+                </div>
+                <div class="the-boat-infos-3">
+                    La liaison Dakar - Karabane - Ziguinchor : il reliait la Casamance, province isolée, au reste du
+                    Sénégal, évitant de
+                    transiter par la Gambie. Il réalisait deux liaisons par semaine à partir de la capitale
+                </div>
+            </div>
+            <div class="Card" id="Ziguinchor-Card">
+                <h1 class="Card-title">Ziguinchor</h1>
+                <p>Parti de Ziguinchor sur le fleuve Casamance au Sénégal en fin d’après-midi le 26 septembre 2002, en
+                    direction de Dakar,
+                    le roulier Le Joola avait fait naufrage dans la nuit, pris dans une tempête tropicale. Le marin
+                    publie
+                    en accès libre
+                    ses archives sur ce drame survenu il y a vingt ans.</p>
+                <div class="galerie">
+                    <img class="image-in-galerie" src="./Style/Images/Galerie/Image-1.jpg" width="32%" alt="">
+                    <img class="image-in-galerie" src="./Style/Images/Galerie/Image-2.jpg" width="32%" alt="">
+                    <img class="image-in-galerie" src="./Style/Images/Galerie/Image-3.jpg" width="32%" alt="">
+                </div>
+                <div class="close-btn">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="Card" id="Dakar-Card">
+                <h1 class="Card-title">Dakar</h1>
+                <p>Parti de Ziguinchor sur le fleuve Casamance au Sénégal en fin d’après-midi le 26 septembre 2002, en
+                    direction de Dakar,
+                    le roulier Le Joola avait fait naufrage dans la nuit, pris dans une tempête tropicale. Le marin
+                    publie
+                    en accès libre
+                    ses archives sur ce drame survenu il y a vingt ans.</p>
+                <div class="galerie">
+                    <img src="./Style/Images/Galerie/Image-4.jpg" width="32%" alt="">
+                    <img src="./Style/Images/Galerie/Image-5.jpg" width="32%" alt="">
+                </div>
+                <p>Heure de depar 12h 30</p>
+                <div class="close-btn">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="One-dote" id="dote-carabane">
+                <div>
+                    Carabane
+                </div>
+            </div>
+            <div class="Card" id="Carabane-Card">
+                <h1 class="Card-title">Carabane</h1>
+                <p>Parti de Ziguinchor sur le fleuve Casamance au Sénégal en fin d’après-midi le 26 septembre 2002, en
+                    direction de Dakar,
+                    le roulier Le Joola avait fait naufrage dans la nuit, pris dans une tempête tropicale. Le marin
+                    publie
+                    en accès libre
+                    ses archives sur ce drame survenu il y a vingt ans.</p>
+                <div class="galerie">
+                    <img src="./Style/Images/Galerie/Image-4.jpg" width="32%" alt="">
+                    <img src="./Style/Images/Galerie/Image-5.jpg" width="32%" alt="">
+                </div>
+                <p>Heure de depar 12h 30</p>
+                <div class="close-btn">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    let theDots = document.querySelectorAll('.One-dote')
+    let images = document.querySelectorAll('.image-in-galerie')
+    let theCards = document.querySelectorAll('.Card')
+    let closeBtn = document.querySelectorAll('.close-btn')
+    let TheImage = document.querySelector('.the-image-displayer')
+    let doteZiguinchor = document.querySelector('#Ziguinchor-Card')
+    let closeImgageBtn = document.querySelector('.close-imgage-btn')
+    let theImageDisplayer = document.querySelector('.image-displayer')
+    let doteDakar = document.querySelector('#Dakar-Card')
+    let doteCarabane = document.querySelector('#Carabane-Card')
+    //##########################################################
+    //##########################################################
+    //##########################################################
+    theDots[1].addEventListener("click", function () {
+        theCards.forEach(e => {
+            e.style.transform = ''
+            e.style.opacity = ''
+            e.style.transitionDuration = ''
+        });
+        doteZiguinchor.style.transform = 'scale(1)'
+        doteZiguinchor.style.opacity = '1'
+        doteZiguinchor.style.transitionDuration = '1s, 1s'
+    });
+    theDots[0].addEventListener("click", function () {
+        theCards.forEach(e => {
+            e.style.transform = ''
+            e.style.opacity = ''
+            e.style.transitionDuration = ''
+        });
+        doteDakar.style.transform = 'scale(1)'
+        doteDakar.style.opacity = '1'
+        doteDakar.style.transitionDuration = '1s, 1s'
+    });
+    theDots[2].addEventListener("click", function () {
+        theCards.forEach(e => {
+            e.style.transform = ''
+            e.style.opacity = ''
+            e.style.transitionDuration = ''
+        });
+        doteCarabane.style.transform = 'scale(1)'
+        doteCarabane.style.opacity = '1'
+        doteCarabane.style.transitionDuration = '1s, 1s'
+    });
+    //##########################################################
+    //##########################################################
+    //##########################################################
+    closeBtn[1].addEventListener("click", function () {
+        doteDakar.style.transform = ''
+        doteDakar.style.opacity = ''
+        doteDakar.style.transitionDuration = ''
+    });
+    closeBtn[0].addEventListener("click", function () {
+        doteZiguinchor.style.transform = ''
+        doteZiguinchor.style.opacity = ''
+        doteZiguinchor.style.transitionDuration = ''
+    });
+    closeBtn[2].addEventListener("click", function () {
+        doteCarabane.style.transform = ''
+        doteCarabane.style.opacity = ''
+        doteCarabane.style.transitionDuration = ''
+    });
+    //##########################################################
+    //##########################################################
+    //##########################################################
+    closeImgageBtn.addEventListener("click", function () {
+        theImageDisplayer.style.display = 'none'
+    });
+    images.forEach((image, index) => {
+        console.log('Image');
+        image.addEventListener('click', (e) => {
+            TheImage.childNodes[1].setAttribute("src", `./Style/Images/Galerie/Image-${index + 1}.jpg`)
+            theImageDisplayer.style.display = 'flex'
+        })
+    });
+</script>
+
+</body>
+
+</html>

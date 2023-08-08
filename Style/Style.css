@@ -1,0 +1,754 @@
+* {
+  margin: 0em;
+  padding: 0em;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+
+.image-displayer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image-displayer .the-image-displayer {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image-displayer .the-image-displayer .close-imgage-btn {
+  width: 1em;
+  height: 1em;
+  color: #f1f1f1;
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.image-displayer .the-image-displayer .close-imgage-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.image-displayer .the-image-displayer .close-imgage-btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.big-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.big-container .map {
+  width: 200em;
+  height: 200em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.big-container .map .the-image {
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  opacity: 1;
+  z-index: 2;
+}
+
+@-webkit-keyframes mapanimation {
+  0% {
+    opacity: .3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .3;
+  }
+}
+
+@keyframes mapanimation {
+  0% {
+    opacity: .3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .3;
+  }
+}
+
+.big-container .map .the-image-2 {
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  opacity: 1;
+  z-index: 2;
+  -webkit-animation: mapanimation 3s linear infinite;
+          animation: mapanimation 3s linear infinite;
+}
+
+.big-container .map .the-dote {
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  z-index: 3;
+}
+
+@-webkit-keyframes boatanimation {
+  0% {
+    left: 40%;
+    top: 68%;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 1;
+    background-image: url("./Images/Boate-1.png");
+  }
+  2% {
+    left: 37%;
+    top: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    left: 30%;
+    top: 67%;
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10% {
+    left: 25%;
+    top: 70%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  13% {
+    left: 21%;
+    top: 68%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  15% {
+    left: 22%;
+    top: 64%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  18% {
+    left: 22%;
+    top: 60%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  22% {
+    left: 21.6%;
+    top: 53%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  32% {
+    left: 17%;
+    top: 37%;
+    -webkit-transform: rotate(67deg);
+            transform: rotate(67deg);
+  }
+  40% {
+    left: 13%;
+    top: 30%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  50% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 1;
+  }
+  51% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 0;
+    background-image: url("./Images/Boate-1.png");
+  }
+  52% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 0;
+    background-image: url("./Images/Boate-2.png");
+  }
+  53% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 1;
+    background-image: url("./Images/Boate-2.png");
+  }
+  60% {
+    left: 13%;
+    top: 30%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  65% {
+    left: 17%;
+    top: 37%;
+    -webkit-transform: rotate(67deg);
+            transform: rotate(67deg);
+  }
+  70% {
+    left: 21.6%;
+    top: 53%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  75% {
+    left: 22%;
+    top: 60%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  80% {
+    left: 22%;
+    top: 64%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  84% {
+    left: 21%;
+    top: 69%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  88% {
+    left: 25%;
+    top: 70%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  93% {
+    left: 30%;
+    top: 67%;
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  96% {
+    left: 37%;
+    top: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  99% {
+    left: 40%;
+    top: 68%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    opacity: 1;
+    background-image: url("./Images/Boate-2.png");
+  }
+  100% {
+    left: 40%;
+    top: 68%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    opacity: 0;
+    background-image: url("./Images/Boate-1.png");
+  }
+}
+
+@keyframes boatanimation {
+  0% {
+    left: 40%;
+    top: 68%;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 1;
+    background-image: url("./Images/Boate-1.png");
+  }
+  2% {
+    left: 37%;
+    top: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    left: 30%;
+    top: 67%;
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10% {
+    left: 25%;
+    top: 70%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  13% {
+    left: 21%;
+    top: 68%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  15% {
+    left: 22%;
+    top: 64%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  18% {
+    left: 22%;
+    top: 60%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  22% {
+    left: 21.6%;
+    top: 53%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  32% {
+    left: 17%;
+    top: 37%;
+    -webkit-transform: rotate(67deg);
+            transform: rotate(67deg);
+  }
+  40% {
+    left: 13%;
+    top: 30%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  50% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 1;
+  }
+  51% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 0;
+    background-image: url("./Images/Boate-1.png");
+  }
+  52% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 0;
+    background-image: url("./Images/Boate-2.png");
+  }
+  53% {
+    left: 6%;
+    top: 9.7%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    opacity: 1;
+    background-image: url("./Images/Boate-2.png");
+  }
+  60% {
+    left: 13%;
+    top: 30%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  65% {
+    left: 17%;
+    top: 37%;
+    -webkit-transform: rotate(67deg);
+            transform: rotate(67deg);
+  }
+  70% {
+    left: 21.6%;
+    top: 53%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  75% {
+    left: 22%;
+    top: 60%;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  80% {
+    left: 22%;
+    top: 64%;
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg);
+  }
+  84% {
+    left: 21%;
+    top: 69%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  88% {
+    left: 25%;
+    top: 70%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  93% {
+    left: 30%;
+    top: 67%;
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  96% {
+    left: 37%;
+    top: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  99% {
+    left: 40%;
+    top: 68%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    opacity: 1;
+    background-image: url("./Images/Boate-2.png");
+  }
+  100% {
+    left: 40%;
+    top: 68%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    opacity: 0;
+    background-image: url("./Images/Boate-1.png");
+  }
+}
+
+.big-container .map .the-dote .the-boat {
+  width: 10em;
+  height: 7em;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  left: 37%;
+  top: 68%;
+  -webkit-animation: boatanimation 45s linear infinite;
+          animation: boatanimation 45s linear infinite;
+  z-index: 11;
+}
+
+.big-container .map .the-dote .the-boat:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.big-container .map .the-dote .the-boat div {
+  background-color: #f1f1f1;
+  position: relative;
+  width: 150%;
+  padding: .5em;
+  border-radius: 1em;
+  display: none;
+}
+
+.big-container .map .the-dote .the-boat div::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 1em);
+  width: 2em;
+  height: 2em;
+  background-color: #f1f1f1;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.big-container .map .the-dote .the-boat .the-boat-infos {
+  bottom: -110%;
+  left: -50%;
+}
+
+.big-container .map .the-dote .the-boat .the-boat-infos::after {
+  top: -.5em;
+}
+
+.big-container .map .the-dote .the-boat .the-boat-infos-2 {
+  top: -120%;
+  left: -10%;
+}
+
+.big-container .map .the-dote .the-boat .the-boat-infos-2::after {
+  bottom: -.5em;
+}
+
+.big-container .map .the-dote .the-boat .the-boat-infos-3 {
+  top: 95%;
+  left: 60%;
+}
+
+.big-container .map .the-dote .the-boat .the-boat-infos-3::after {
+  top: -.5em;
+  left: calc(15% - 1em);
+}
+
+@-webkit-keyframes doteanimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes doteanimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.big-container .map .the-dote .One-dote {
+  width: 2em;
+  height: 2em;
+  position: relative;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: red;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-animation: doteanimation 1s linear infinite;
+          animation: doteanimation 1s linear infinite;
+}
+
+.big-container .map .the-dote .One-dote div {
+  position: relative;
+  bottom: -115%;
+  font-size: 1.5em;
+  background-color: #f1f1f1;
+  border-radius: .2em;
+  padding-left: .2em;
+  padding-right: .2em;
+}
+
+.big-container .map .the-dote .One-dote div::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - .5em);
+  width: 1em;
+  height: 1em;
+  background-color: #f1f1f1;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.big-container .map .the-dote .One-dote:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation: doteanimation 0s linear infinite;
+          animation: doteanimation 0s linear infinite;
+}
+
+.big-container .map .the-dote .One-dote:nth-child(1) {
+  left: 7%;
+  top: 10.6%;
+}
+
+.big-container .map .the-dote .One-dote:nth-child(1) div {
+  top: -202%;
+  left: -100%;
+}
+
+.big-container .map .the-dote .One-dote:nth-child(2) {
+  left: 41.2%;
+  top: 71.1%;
+}
+
+.big-container .map .the-dote #dote-carabane {
+  left: 28%;
+  top: 28.5%;
+}
+
+.big-container .map .the-dote .Card {
+  width: 40em;
+  height: 40em;
+  position: relative;
+  border-radius: 2%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 22;
+  background-color: rgba(241, 241, 241, 0.99);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 1s, 1s;
+          transition-duration: 1s, 1s;
+}
+
+.big-container .map .the-dote .Card .Card-title {
+  width: auto;
+  padding: .2em;
+  position: relative;
+  background-color: #f1f1f1;
+  top: -1em;
+  left: -1em;
+  border-radius: .2em;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.big-container .map .the-dote .Card p {
+  margin: 0;
+  padding: .5em;
+}
+
+.big-container .map .the-dote .Card .galerie {
+  width: 110%;
+  position: relative;
+  top: -1em;
+  left: 1em;
+  height: 50%;
+  padding: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: .2em;
+}
+
+.big-container .map .the-dote .Card .galerie img {
+  margin-bottom: .4em;
+}
+
+.big-container .map .the-dote .Card .galerie img:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+.big-container .map .the-dote .Card .close-btn {
+  position: absolute;
+  right: .2em;
+  top: .2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6em;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.big-container .map .the-dote .Card .close-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.big-container .map .the-dote #Ziguinchor-Card {
+  left: 41.2%;
+  top: 45%;
+}
+
+.big-container .map .the-dote #Dakar-Card {
+  left: 12%;
+  top: -15%;
+}
+
+.big-container .map .the-dote #Carabane-Card {
+  left: 32%;
+  top: 21%;
+}
+/*# sourceMappingURL=Style.css.map */

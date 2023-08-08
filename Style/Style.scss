@@ -1,0 +1,511 @@
+@mixin cent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0em;
+    padding: 0em;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+.image-displayer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .the-image-displayer {
+        width: 50%;
+        display: flex;
+
+        .close-imgage-btn {
+            width: 1em;
+            height: 1em;
+            color: #f1f1f1;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:active {
+                transform: scale(.9);
+            }
+        }
+    }
+}
+
+.big-container {
+    width: 100vw;
+    height: 100vh;
+
+    .map {
+        width: 200em;
+        height: 200em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        .the-image {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        @keyframes mapanimation {
+            0% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+
+        .the-image-2 {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            opacity: 1;
+            z-index: 2;
+            animation: mapanimation 3s linear infinite;
+        }
+
+        .the-dote {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            z-index: 3;
+
+
+            @keyframes boatanimation {
+                0% {
+                    left: 40%;
+                    top: 68%;
+                    transform: rotate(20deg);
+                    opacity: 1;
+                    background-image: url('./Images/Boate-1.png');
+                }
+
+                2% {
+                    left: 37%;
+                    top: 70%;
+                    transform: rotate(0deg);
+                }
+
+                5% {
+                    left: 30%;
+                    top: 67%;
+                    transform: rotate(5deg);
+                }
+
+                10% {
+                    left: 25%;
+                    top: 70%;
+                    transform: rotate(-10deg);
+                }
+
+                13% {
+                    left: 21%;
+                    top: 68%;
+                    transform: rotate(35deg);
+                }
+
+                15% {
+                    left: 22%;
+                    top: 64%;
+                    transform: rotate(65deg);
+                }
+
+                18% {
+                    left: 22%;
+                    top: 60%;
+                    transform: rotate(70deg);
+                }
+
+                22% {
+                    left: 21.6%;
+                    top: 53%;
+                    transform: rotate(70deg);
+                }
+
+                32% {
+                    left: 17%;
+                    top: 37%;
+                    transform: rotate(67deg);
+                }
+
+                40% {
+                    left: 13%;
+                    top: 30%;
+                    transform: rotate(65deg);
+                }
+
+                50% {
+                    left: 6%;
+                    top: 9.7%;
+                    transform: rotate(75deg);
+                    opacity: 1;
+                }
+
+                51% {
+                    left: 6%;
+                    top: 9.7%;
+                    transform: rotate(75deg);
+                    opacity: 0;
+                    background-image: url('./Images/Boate-1.png');
+                }
+
+                52% {
+                    left: 6%;
+                    top: 9.7%;
+                    transform: rotate(75deg);
+                    opacity: 0;
+                    background-image: url('./Images/Boate-2.png');
+                }
+
+                53% {
+                    left: 6%;
+                    top: 9.7%;
+                    transform: rotate(75deg);
+                    opacity: 1;
+                    background-image: url('./Images/Boate-2.png');
+                }
+
+                60% {
+                    left: 13%;
+                    top: 30%;
+                    transform: rotate(65deg);
+                }
+
+
+                65% {
+                    left: 17%;
+                    top: 37%;
+                    transform: rotate(67deg);
+                }
+
+                70% {
+                    left: 21.6%;
+                    top: 53%;
+                    transform: rotate(70deg);
+                }
+
+                75% {
+                    left: 22%;
+                    top: 60%;
+                    transform: rotate(70deg);
+                }
+
+                80% {
+                    left: 22%;
+                    top: 64%;
+                    transform: rotate(65deg);
+                }
+
+                84% {
+                    left: 21%;
+                    top: 69%;
+                    transform: rotate(35deg);
+                }
+
+                88% {
+                    left: 25%;
+                    top: 70%;
+                    transform: rotate(-10deg);
+                }
+
+
+                93% {
+                    left: 30%;
+                    top: 67%;
+                    transform: rotate(5deg);
+                }
+
+                96% {
+                    left: 37%;
+                    top: 70%;
+                    transform: rotate(0deg);
+                }
+
+                99% {
+                    left: 40%;
+                    top: 68%;
+                    transform: rotate(-10deg);
+                    opacity: 1;
+                    background-image: url('./Images/Boate-2.png');
+                }
+
+                100% {
+                    left: 40%;
+                    top: 68%;
+                    transform: rotate(-10deg);
+                    opacity: 0;
+                    background-image: url('./Images/Boate-1.png');
+                }
+            }
+
+            .the-boat {
+                width: 10em;
+                height: 7em;
+                background-size: 100%;
+                background-position: center;
+                position: relative;
+                left: 37%;
+                top: 68%;
+                animation: boatanimation 45s linear infinite;
+                z-index: 11;
+
+                &:hover {
+                    div {
+                        display: flex;
+                    }
+
+
+                }
+
+                div {
+                    background-color: #f1f1f1;
+                    position: relative;
+                    width: 150%;
+                    padding: .5em;
+                    border-radius: 1em;
+                    display: none;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: calc(50% - 1em);
+                        width: 2em;
+                        height: 2em;
+                        background-color: #f1f1f1;
+                        z-index: -1;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                .the-boat-infos {
+                    bottom: -110%;
+                    left: -50%;
+
+                    &::after {
+                        top: -.5em;
+                    }
+                }
+
+                .the-boat-infos-2 {
+                    top: -120%;
+                    left: -10%;
+
+                    &::after {
+                        bottom: -.5em;
+                    }
+                }
+
+                .the-boat-infos-3 {
+                    top: 95%;
+                    left: 60%;
+
+                    &::after {
+                        top: -.5em;
+                        left: calc(15% - 1em);
+                    }
+                }
+            }
+
+            @keyframes doteanimation {
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.2);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            .One-dote {
+                width: 2em;
+                height: 2em;
+                position: relative;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: red;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                animation: doteanimation 1s linear infinite;
+
+                div {
+                    position: relative;
+                    bottom: -115%;
+                    font-size: 1.5em;
+                    background-color: #f1f1f1;
+                    border-radius: .2em;
+                    padding-left: .2em;
+                    padding-right: .2em;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: calc(50% - .5em);
+                        width: 1em;
+                        height: 1em;
+                        background-color: #f1f1f1;
+                        z-index: -1;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                    animation: doteanimation 0s linear infinite;
+                }
+            }
+
+            .One-dote:nth-child(1) {
+                left: 7%;
+                top: 10.6%;
+
+                div {
+                    top: -202%;
+                    left: -100%;
+                }
+            }
+
+            .One-dote:nth-child(2) {
+                left: 41.2%;
+                top: 71.1%;
+            }
+
+            #dote-carabane {
+                left: 28%;
+                top: 28.5%;
+
+                // background-color: sandybrown;
+
+
+            }
+
+            .Card {
+                width: 40em;
+                height: 40em;
+                position: relative;
+                border-radius: 2%;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                z-index: 22;
+                background-color: rgba($color: #f1f1f1, $alpha: .99);
+                transform: scale(0);
+                opacity: 0;
+                display: flex;
+                transition-property: transform, opacity;
+                transition-duration: 1s, 1s;
+
+                .Card-title {
+                    width: auto;
+                    padding: .2em;
+                    position: relative;
+                    background-color: #f1f1f1;
+                    top: -1em;
+                    left: -1em;
+                    border-radius: .2em;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                }
+
+                p {
+                    margin: 0;
+                    padding: .5em;
+                }
+
+                .galerie {
+                    width: 110%;
+                    position: relative;
+                    top: -1em;
+                    left: 1em;
+                    height: 50%;
+                    padding: .5em;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    overflow-y: scroll;
+                    background-color: #f1f1f1;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                    border-radius: .2em;
+
+                    img {
+                        margin-bottom: .4em;
+
+                        &:hover {
+                            transform: scale(1.06);
+                        }
+                    }
+                }
+
+                .close-btn {
+                    position: absolute;
+                    right: .2em;
+                    top: .2em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.6em;
+                    font-weight: 900;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            #Ziguinchor-Card {
+                left: 41.2%;
+                top: 45%;
+            }
+
+            #Dakar-Card {
+                left: 12%;
+                top: -15%;
+            }
+
+            #Carabane-Card {
+                left: 32%;
+                top: 21%;
+            }
+
+        }
+    }
+}
