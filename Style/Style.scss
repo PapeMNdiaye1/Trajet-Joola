@@ -34,12 +34,15 @@ html {
         .close-imgage-btn {
             width: 1em;
             height: 1em;
-            color: #f1f1f1;
+            margin: .1em;
             font-size: 2em;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+            border-radius: .1em;
+            background-color: #f1f1f1;
 
             &:hover {
                 transform: scale(1.2);
@@ -72,6 +75,9 @@ html {
             z-index: 2;
         }
 
+        //!#################################################################
+        //!#################################################################
+        //!#################################################################
         @keyframes mapanimation {
             0% {
                 opacity: .3;
@@ -86,6 +92,9 @@ html {
             }
         }
 
+        //!#################################################################
+        //!#################################################################
+        //!#################################################################
         .the-image-2 {
             width: 100%;
             height: 100%;
@@ -96,13 +105,15 @@ html {
             animation: mapanimation 3s linear infinite;
         }
 
+        //!#################################################################
+        //!#################################################################
+        //!#################################################################
         .the-dote {
             width: 100%;
             height: 100%;
             grid-column-start: 1;
             grid-row-start: 1;
             z-index: 3;
-
 
             @keyframes boatanimation {
                 0% {
@@ -267,7 +278,7 @@ html {
                     top: 68%;
                     transform: rotate(-10deg);
                     opacity: 0;
-                    background-image: url('./Images/Boate-1.png');
+                    background-image: url('./Images/Boate-2.png');
                 }
             }
 
@@ -339,13 +350,15 @@ html {
                 }
             }
 
+            //?#################################################################
+
             @keyframes doteanimation {
                 0% {
                     transform: scale(1);
                 }
 
                 50% {
-                    transform: scale(1.2);
+                    transform: scale(1.05);
                 }
 
                 100% {
@@ -400,6 +413,7 @@ html {
                 div {
                     top: -202%;
                     left: -100%;
+
                 }
             }
 
@@ -410,16 +424,195 @@ html {
 
             #dote-carabane {
                 left: 28%;
-                top: 28.5%;
+                top: 68%;
 
-                // background-color: sandybrown;
+                div {
+                    top: -142%;
+                    left: -100%;
 
+                    &::after {
+                        left: calc(75% - .5em);
+                        bottom: 0%;
+                        // height: 1em;
+                        // background-color: #f1f1f1;
+                        // z-index: -1;
+                        // transform: rotate(45deg);
+                    }
+                }
 
             }
 
+            //?#################################################################
+
+            .One-lil-dote {
+                width: 2em;
+                height: 2em;
+                position: relative;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: darkcyan;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                animation: doteanimation 1s linear infinite;
+
+                div {
+                    position: relative;
+                    bottom: -115%;
+                    font-size: 1.1em;
+                    background-color: #f1f1f1;
+                    border-radius: .2em;
+                    padding-left: .2em;
+                    padding-right: .2em;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: calc(50% - .5em);
+                        top: 0;
+                        width: 1em;
+                        height: 1em;
+                        background-color: #f1f1f1;
+                        z-index: -1;
+                        transform: rotate(45deg);
+
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                    animation: doteanimation 0s linear infinite;
+                    z-index: 3;
+                }
+            }
+
+            #dote-kachouene {
+                left: 28%;
+                top: 69%;
+
+                div {
+                    top: 117%;
+                    left: -70%;
+
+                    &::after {
+
+                        left: calc(70% - .5em);
+                        top: 0;
+
+
+                    }
+                }
+            }
+
+            #dote-Wendaye {
+                left: 31%;
+                top: 71%;
+
+                div {
+                    top: 117%;
+                    left: -70%;
+
+                    &::after {
+                        left: calc(80% - .5em);
+                        top: 0;
+                    }
+                }
+            }
+
+            #dote-Sifoca {
+                left: 30.5%;
+                top: 66%;
+
+                div {
+                    top: -117%;
+                    left: -70%;
+
+                    &::after {
+                        left: calc(70% - .5em);
+                        top: 20%;
+                    }
+                }
+            }
+
+            #dote-Ourong {
+                left: 29.5%;
+                top: 67%;
+
+                div {
+                    top: 116%;
+                    left: 50%;
+
+                    &::after {
+                        left: calc(27% - .5em);
+                        top: 0;
+                    }
+                }
+            }
+
+            #dote-Gnikine {
+                left: 26.9%;
+                top: 64%;
+
+                div {
+                    top: 106%;
+                    left: -70%;
+
+                    &::after {
+                        left: calc(80% - .5em);
+                        bottom: -200;
+                    }
+                }
+            }
+
+            #dote-Diogué {
+                left: 26.9%;
+                top: 59.5%;
+
+
+                div {
+                    top: -106%;
+                    left: -70%;
+
+                    &::after {
+                        left: calc(80% - .5em);
+                        top: 20%;
+                    }
+                }
+            }
+
+            #dote-Hitou {
+                left: 44.9%;
+                top: 57.5%;
+
+                div {
+                    top: -106%;
+                    left: -70%;
+
+                    &::after {
+                        left: calc(80% - .5em);
+                        top: 20%;
+                    }
+                }
+            }
+
+        }
+
+        //!#################################################################
+        //!#################################################################
+        //!#################################################################
+        .the-Cards {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            z-index: 1;
+            display: flex;
+            overflow: hidden;
+
             .Card {
-                width: 40em;
                 height: 40em;
+                width: 40em;
                 position: relative;
                 border-radius: 2%;
                 align-items: flex-start;
@@ -431,29 +624,41 @@ html {
                 opacity: 0;
                 display: flex;
                 transition-property: transform, opacity;
-                transition-duration: 1s, 1s;
+                transition-duration: 0s, 0s;
 
                 .Card-title {
                     width: auto;
                     padding: .2em;
+                    padding-top: 0em;
+                    padding-bottom: 0em;
                     position: relative;
                     background-color: #f1f1f1;
                     top: -1em;
                     left: -1em;
                     border-radius: .2em;
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                    -moz-user-select: none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
                 }
 
                 p {
+                    left: 4em;
                     margin: 0;
                     padding: .5em;
+                    margin-left: 1em;
+                    width: 93%;
+                    border-radius: .1em;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                 }
 
                 .galerie {
                     width: 110%;
                     position: relative;
                     top: -1em;
-                    left: 1em;
+                    left: -1em;
                     height: 50%;
                     padding: .5em;
                     display: flex;
@@ -464,9 +669,11 @@ html {
                     background-color: #f1f1f1;
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                     border-radius: .2em;
+                    border: .5em solid #f1f1f1;
 
                     img {
-                        margin-bottom: .4em;
+                        margin-bottom: .9em;
+                        border-radius: .2em;
 
                         &:hover {
                             transform: scale(1.06);
@@ -481,9 +688,14 @@ html {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    right: -1em;
+                    top: -1em;
                     font-size: 1.6em;
                     font-weight: 900;
                     cursor: pointer;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                    border-radius: .1em;
+                    background-color: #f1f1f1;
 
                     &:hover {
                         transform: scale(1.2);
@@ -493,17 +705,56 @@ html {
 
             #Ziguinchor-Card {
                 left: 41.2%;
-                top: 45%;
+                top: 50%;
             }
 
             #Dakar-Card {
-                left: 12%;
-                top: -15%;
+                left: 13%;
+                top: 12%;
             }
 
             #Carabane-Card {
-                left: 32%;
-                top: 21%;
+                left: 22%;
+                top: 50%;
+            }
+
+            #Kachouane-Card {
+                left: 35%;
+                top: 65%;
+            }
+
+            #Wendaye-Card {
+                left: 35%;
+                top: 59%;
+            }
+
+            #Sifoca-Card {
+                left: 33%;
+                top: 57%;
+
+            }
+
+            #Ourong-Card {
+                left: 35%;
+                top: 67%;
+
+            }
+
+            #Gnikine-Card {
+                left: 5%;
+                top: 67%;
+
+            }
+
+            #Diogué-Card {
+                left: 35%;
+                top: 67%;
+
+            }
+
+            #Hitou-Card {
+                left: 50%;
+                top: 67%;
             }
 
         }
