@@ -542,10 +542,8 @@ html {
                         left: calc(70% - .5em);
                         top: 20%;
                     }
-
                 }
             }
-
             .One-dote:nth-child(2) {
                 left: 41.2%;
                 top: 71.1%;
@@ -558,14 +556,16 @@ html {
             #dote-carabane {
                 left: 28%;
                 top: 68%;
+                z-index: 2;
 
                 div {
-                    top: -142%;
+                    top: 122%;
                     left: -100%;
 
                     &::after {
                         left: calc(75% - .5em);
-                        bottom: 0%;
+                        
+                        top: -7%;
                     }
                 }
 

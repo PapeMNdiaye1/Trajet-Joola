@@ -471,14 +471,15 @@ html::-webkit-scrollbar-corner {
 .big-container .map .the-dote #dote-carabane {
   left: 28%;
   top: 68%;
+  z-index: 2;
 }
 .big-container .map .the-dote #dote-carabane div {
-  top: -142%;
+  top: 122%;
   left: -100%;
 }
 .big-container .map .the-dote #dote-carabane div::after {
   left: calc(75% - 0.5em);
-  bottom: 0%;
+  top: -7%;
 }
 .big-container .map .the-dote .One-lil-dote {
   width: 2em;
