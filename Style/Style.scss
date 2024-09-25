@@ -15,6 +15,43 @@ html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: black;
+
+    &::-webkit-scrollbar {
+        width: 1em;
+        background-color: black;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: black;
+    }
+}
+
+.Black-bar-1 {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 1.3em;
+    left: 0%;
+    background-color: black;
+    z-index: 22;
+}
+
+.Black-bar-2 {
+    position: fixed;
+    top: 0%;
+    width: 1.3em;
+    height: 100%;
+    left: 0%;
+    background-color: black;
+    z-index: 22;
 }
 
 .image-displayer {
@@ -55,9 +92,84 @@ html {
     }
 }
 
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition-duration: 1s;
+    opacity: 1;
+
+    video {
+        height: 100vh;
+    }
+}
+
 .big-container {
     width: 100vw;
     height: 100vh;
+
+    .slidecontainer {
+        width: 100%;
+        /* Width of the outside container */
+    }
+
+    /* The slider itself */
+    .slider {
+        -webkit-appearance: none;
+        /* Override default CSS styles */
+        appearance: none;
+        width: 100%;
+        /* Full-width */
+        height: 25px;
+        /* Specified height */
+        background: #d3d3d3;
+        /* Grey background */
+        outline: none;
+        /* Remove outline */
+        opacity: 0.7;
+        /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s;
+        /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1;
+        /* Fully shown on mouse-over */
+    }
+
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        /* Override default look */
+        appearance: none;
+        width: 25px;
+        /* Set a specific slider handle width */
+        height: 25px;
+        /* Slider handle height */
+        background: #04AA6D;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        /* Set a specific slider handle width */
+        height: 25px;
+        /* Slider handle height */
+        background: #04AA6D;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+    }
 
     .map {
         width: 200em;
@@ -80,7 +192,7 @@ html {
         //!#################################################################
         @keyframes mapanimation {
             0% {
-                opacity: .3;
+                opacity: 0;
             }
 
             50% {
@@ -88,7 +200,7 @@ html {
             }
 
             100% {
-                opacity: .3;
+                opacity: 0;
             }
         }
 
@@ -102,7 +214,7 @@ html {
             grid-row-start: 1;
             opacity: 1;
             z-index: 2;
-            animation: mapanimation 3s linear infinite;
+            animation: mapanimation 6s linear infinite;
         }
 
         //!#################################################################
@@ -290,15 +402,13 @@ html {
                 position: relative;
                 left: 37%;
                 top: 68%;
-                animation: boatanimation 45s linear infinite;
+                animation: boatanimation 100s linear infinite;
                 z-index: 11;
 
                 &:hover {
                     div {
                         display: flex;
                     }
-
-
                 }
 
                 div {
@@ -374,7 +484,7 @@ html {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: red;
+                background-color: #ea1e5b;
                 cursor: pointer;
                 box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                 animation: doteanimation 1s linear infinite;
@@ -387,6 +497,8 @@ html {
                     border-radius: .2em;
                     padding-left: .2em;
                     padding-right: .2em;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+
 
                     &::after {
                         content: '';
@@ -403,6 +515,18 @@ html {
                 &:hover {
                     transform: scale(1.2);
                     animation: doteanimation 0s linear infinite;
+                    z-index: 11;
+
+                    div {
+                        background-color: #ea1e5b;
+                        color: #f1f1f1;
+
+                        &::after {
+                            background-color: #ea1e5b;
+
+
+                        }
+                    }
                 }
             }
 
@@ -413,6 +537,11 @@ html {
                 div {
                     top: -202%;
                     left: -100%;
+
+                    &::after {
+                        left: calc(70% - .5em);
+                        top: 20%;
+                    }
 
                 }
             }
@@ -433,17 +562,12 @@ html {
                     &::after {
                         left: calc(75% - .5em);
                         bottom: 0%;
-                        // height: 1em;
-                        // background-color: #f1f1f1;
-                        // z-index: -1;
-                        // transform: rotate(45deg);
                     }
                 }
 
             }
 
             //?#################################################################
-
             .One-lil-dote {
                 width: 2em;
                 height: 2em;
@@ -452,7 +576,7 @@ html {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: darkcyan;
+                background-color: rgb(32, 220, 220);
                 cursor: pointer;
                 box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                 animation: doteanimation 1s linear infinite;
@@ -460,11 +584,12 @@ html {
                 div {
                     position: relative;
                     bottom: -115%;
-                    font-size: 1.1em;
+                    font-size: .8em;
                     background-color: #f1f1f1;
                     border-radius: .2em;
                     padding-left: .2em;
                     padding-right: .2em;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 
                     &::after {
                         content: '';
@@ -484,10 +609,21 @@ html {
                     transform: scale(1.2);
                     animation: doteanimation 0s linear infinite;
                     z-index: 3;
+
+                    div {
+                        background-color: #ea1e5b;
+                        color: #f1f1f1;
+
+                        &::after {
+                            background-color: #ea1e5b;
+
+
+                        }
+                    }
                 }
             }
 
-            #dote-kachouene {
+            #dote-Kachouane {
                 left: 28%;
                 top: 69%;
 
@@ -522,10 +658,10 @@ html {
 
             #dote-Sifoca {
                 left: 30.5%;
-                top: 66%;
+                top: 65.5%;
 
                 div {
-                    top: -117%;
+                    top: -133%;
                     left: -70%;
 
                     &::after {
@@ -537,14 +673,14 @@ html {
 
             #dote-Ourong {
                 left: 29.5%;
-                top: 67%;
+                top: 67.5%;
 
                 div {
                     top: 116%;
-                    left: 50%;
+                    left: -50%;
 
                     &::after {
-                        left: calc(27% - .5em);
+                        left: calc(70% - .5em);
                         top: 0;
                     }
                 }
@@ -582,8 +718,23 @@ html {
             }
 
             #dote-Hitou {
-                left: 44.9%;
+                left: 29%;
                 top: 57.5%;
+
+                div {
+                    top: 106%;
+                    left: -50%;
+
+                    &::after {
+                        left: calc(70% - .5em);
+                        top: 0%;
+                    }
+                }
+            }
+
+            #dote-Niomoune {
+                left: 31%;
+                top: 56.5%;
 
                 div {
                     top: -106%;
@@ -596,6 +747,81 @@ html {
                 }
             }
 
+            #dote-Cagnout {
+                left: 32%;
+                top: 58.5%;
+
+                div {
+                    top: -110%;
+                    left: -43%;
+
+                    &::after {
+                        left: calc(70% - .5em);
+                        top: 30%;
+                    }
+                }
+            }
+
+            #dote-Samatite {
+                left: 32%;
+                top: 60%;
+
+                div {
+                    top: 106%;
+                    left: 70%;
+
+                    &::after {
+                        left: calc(18% - .5em);
+                        top: 0%;
+                    }
+                }
+            }
+
+            #dote-Saint-Georges {
+                left: 33%;
+                top: 55.4%;
+                z-index: 2;
+
+                div {
+                    top: 106%;
+                    left: 70%;
+
+                    &::after {
+                        left: calc(18% - .5em);
+                        top: 0%;
+                    }
+                }
+            }
+
+            #dote-Elinkine {
+                left: 30%;
+                top: 58%;
+
+                div {
+                    top: 106%;
+                    left: 7%;
+
+                    &::after {
+                        left: calc(18% - .5em);
+                        top: 0%;
+                    }
+                }
+            }
+
+            #dote-Mlomp {
+                left: 33%;
+                top: 55%;
+
+                div {
+                    top: 106%;
+                    left: 60%;
+
+                    &::after {
+                        left: calc(18% - .5em);
+                        top: 0%;
+                    }
+                }
+            }
         }
 
         //!#################################################################
@@ -609,22 +835,24 @@ html {
             z-index: 1;
             display: flex;
             overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.7);
 
             .Card {
-                height: 40em;
+                height: 50em;
                 width: 40em;
                 position: relative;
-                border-radius: 2%;
+                border-radius: 1em;
                 align-items: flex-start;
                 flex-wrap: wrap;
                 box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                 z-index: 22;
-                background-color: rgba($color: #f1f1f1, $alpha: .99);
+                background-color: rgba($color: #f1f1f1, $alpha: 1);
                 transform: scale(0);
                 opacity: 0;
                 display: flex;
                 transition-property: transform, opacity;
                 transition-duration: 0s, 0s;
+                z-index: 1;
 
                 .Card-title {
                     width: auto;
@@ -633,8 +861,8 @@ html {
                     padding-bottom: 0em;
                     position: relative;
                     background-color: #f1f1f1;
-                    top: -1em;
-                    left: -1em;
+                    top: -.51em;
+                    left: -3em;
                     border-radius: .2em;
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                     -moz-user-select: none;
@@ -642,6 +870,7 @@ html {
                     -webkit-user-select: none;
                     -ms-user-select: none;
                     user-select: none;
+                    z-index: 1;
                 }
 
                 p {
@@ -652,13 +881,16 @@ html {
                     width: 93%;
                     border-radius: .1em;
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                    z-index: 1;
+                    background-color: #f1f1f1;
                 }
 
                 .galerie {
                     width: 110%;
                     position: relative;
+                    height: auto;
                     top: -1em;
-                    left: -1em;
+                    left: 3em;
                     height: 50%;
                     padding: .5em;
                     display: flex;
@@ -670,6 +902,8 @@ html {
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                     border-radius: .2em;
                     border: .5em solid #f1f1f1;
+                    margin-top: 2em;
+                    z-index: 1;
 
                     img {
                         margin-bottom: .9em;
@@ -679,6 +913,27 @@ html {
                             transform: scale(1.06);
                         }
                     }
+                }
+
+                .coordonnées {
+                    background-color: #f1f1f1;
+                    // background-color: salmon;
+                    width: auto;
+                    z-index: 1;
+                }
+
+                video {
+                    width: 39em;
+                    height: 26em;
+                    position: absolute;
+                    left: -110%;
+                    top: 20%;
+                    border: .5em solid #f1f1f1;
+                    background-color: black;
+                    border-radius: .5em;
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+
+                    z-index: 1;
                 }
 
                 .close-btn {
@@ -696,6 +951,16 @@ html {
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
                     border-radius: .1em;
                     background-color: #f1f1f1;
+                    z-index: -1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 150em;
+                        height: 150em;
+                        opacity: 0.1;
+                        z-index: -2;
+                    }
 
                     &:hover {
                         transform: scale(1.2);
@@ -704,23 +969,23 @@ html {
             }
 
             #Ziguinchor-Card {
-                left: 41.2%;
+                left: 51.2%;
                 top: 50%;
             }
 
             #Dakar-Card {
-                left: 13%;
-                top: 12%;
+                left: 26%;
+                top: 10%;
             }
 
             #Carabane-Card {
-                left: 22%;
+                left: 32%;
                 top: 50%;
             }
 
             #Kachouane-Card {
                 left: 35%;
-                top: 65%;
+                top: 55%;
             }
 
             #Wendaye-Card {
@@ -730,19 +995,23 @@ html {
 
             #Sifoca-Card {
                 left: 33%;
-                top: 57%;
+                top: 50%;
 
             }
 
             #Ourong-Card {
                 left: 35%;
-                top: 67%;
+                top: 55%;
 
             }
 
             #Gnikine-Card {
                 left: 5%;
-                top: 67%;
+                top: 57%;
+
+                video {
+                    left: 110%;
+                }
 
             }
 
@@ -753,10 +1022,45 @@ html {
             }
 
             #Hitou-Card {
+                left: 40%;
+                top: 67%;
+            }
+
+            #Niomoune-Card {
                 left: 50%;
                 top: 67%;
             }
 
+            #Cagnout-Card {
+                left: 40%;
+                top: 55%;
+            }
+
+            #Samatite-Card {
+                left: 40%;
+                top: 67%;
+            }
+
+            #Saint-Georges-Card {
+                left: 40%;
+                top: 70%;
+            }
+
+            #Elinkine-Card {
+                left: 40%;
+                top: 73%;
+            }
+
+            #Mlomp-Card {
+                left: 40%;
+                top: 67%;
+            }
+
         }
+
+        //!#################################################################
+        //!#################################################################
+        //!#################################################################
+
     }
 }
