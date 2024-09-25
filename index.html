@@ -77,6 +77,11 @@
                     Carabane
                 </div>
             </div>
+            <div class="One-dote" id="dote-deep">
+                <div>
+                Lieu Du Naufrage
+                </div>
+            </div>
             <!--####################################################################################################################-->
             <div class="One-lil-dote" id="dote-Kachouane">
                 <div>
@@ -749,6 +754,7 @@
             <div class="Card" id="Mlomp-Card">
                 <h1 class="Card-title">Mlomp</h1>
                 <p>
+          
                     Mlomp est une commune du Sénégal qui se trouve dans le département d’Oussouye. Il est noté la
                     présence d’autorités
                     administratives et traditionnelle avec la présence d’un Roi MAAN SIBILE SAMBOU. D’après ce dernier,
@@ -790,6 +796,32 @@
                     <ion-icon name="close-outline"></ion-icon>
                 </div>
             </div>
+            <div class="Card" id="Deep-Card">
+                        <h1 class="Card-title">Lieu Du Naufrage</h1>
+                        <p>
+                        Au large des côtes gambiennes, à hauteur de la localité de Sanyang, fit naufrage le Bateau le Joola dans la nuit du 26
+                        au 27 septembre 2002.
+                        L'épave git entre 11 et 16 mètres de profondeurs sur un fond marin sableux. La position de l'épave du Joola est devenu
+                        un lieu de repos éternel pour certaines victimes du naufrage. Quelques objets de cette épave constituent les contenus du
+                        musée du Mémorial Bateau le Joola, sis au quartier escale de Ziguinchor.
+                        </p>
+                        <div class="galerie">
+                            <img class="image-in-galerie" src="./Style/Images/Galerie/Image-4.jpg" width="32%" alt="">
+                            <img class="image-in-galerie" src="./Style/Images/Galerie/Image-5.jpg" width="32%" alt="">
+                            <img class="image-in-galerie" src="./Style/Images/Galerie/Image-6.jpg" width="32%" alt="">
+                        </div>
+                        <p class="coordonnées">
+                            <samp>
+                                Latitude de Mlomp: 12.558660
+                            </samp> <br>
+                            <samp>
+                                Longitude de Mlomp: -16.578902
+                            </samp>
+                        </p>
+                        <div class="close-btn">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
+            </div>
         </div>
 
     </div>
@@ -810,6 +842,7 @@
         let doteZiguinchor = document.querySelector('#Ziguinchor-Card')
         let doteDakar = document.querySelector('#Dakar-Card')
         let doteCarabane = document.querySelector('#Carabane-Card')
+        let doteDeep = document.querySelector('#Deep-Card')
         //##########################################################
         let Kachouane = document.querySelector('#Kachouane-Card')
         let Wendaye = document.querySelector('#Wendaye-Card')
@@ -871,6 +904,21 @@
             doteCarabane.style.transform = 'scale(1)'
             doteCarabane.style.opacity = '1'
             doteCarabane.style.transitionDuration = '1s, 1s'
+        });
+        theDots[3].addEventListener("click", function () {
+            console.log("Deep");
+            
+            CardsContainer.style.zIndex = '5'
+            theCards.forEach(e => {
+                e.style.transform = ''
+                e.style.opacity = ''
+                e.style.transitionDuration = ''
+                e.style.width = '0'
+            });
+            doteDeep.style.width = ''
+            doteDeep.style.transform = 'scale(1)'
+            doteDeep.style.opacity = '1'
+            doteDeep.style.transitionDuration = '1s, 1s'
         });
         //##########################################################
         //##########################################################
@@ -1068,6 +1116,7 @@
             doteCarabane.style.width = '0'
         });
         closeBtn[3].addEventListener("click", function () {
+            
             CardsContainer.style.zIndex = '0'
             Kachouane.style.transitionDuration = '0'
             Kachouane.style.transform = ''
@@ -1157,6 +1206,15 @@
             Mlomp.style.transform = ''
             Mlomp.style.opacity = ''
             Mlomp.style.width = '0'
+        });
+        closeBtn[16].addEventListener("click", function () {
+                        console.log("close");
+
+            CardsContainer.style.zIndex = '0'
+            doteDeep.style.transitionDuration = '0'
+            doteDeep.style.transform = ''
+            doteDeep.style.opacity = ''
+            doteDeep.style.width = '0'
         });
         //##########################################################
         var myTimer = setTimeout(
