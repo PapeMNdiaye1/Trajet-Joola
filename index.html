@@ -830,6 +830,8 @@
         let theDots = document.querySelectorAll('.One-dote')
         let theLilDots = document.querySelectorAll('.One-lil-dote')
         let images = document.querySelectorAll('.image-in-galerie')
+        console.log(images);
+        
         let theCards = document.querySelectorAll('.Card')
         let closeBtn = document.querySelectorAll('.close-btn')
         //##########################################################
@@ -1208,7 +1210,6 @@
             Mlomp.style.width = '0'
         });
         closeBtn[16].addEventListener("click", function () {
-                        console.log("close");
 
             CardsContainer.style.zIndex = '0'
             doteDeep.style.transitionDuration = '0'
@@ -1265,7 +1266,8 @@
             theImageDisplayer.style.display = 'none'
         });
         images.forEach((image, index) => {
-            console.log('Image');
+            console.log(image);
+            console.log(index);
             image.addEventListener('click', (e) => {
                 TheImage.childNodes[1].setAttribute("src", `./Style/Images/Galerie/Image-${index + 1}.jpg`)
                 theImageDisplayer.style.display = 'flex'
